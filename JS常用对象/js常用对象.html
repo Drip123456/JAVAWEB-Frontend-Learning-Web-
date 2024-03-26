@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1) 数组的创建
+        /*    var arr = new Array();
+           arr[0] = 1;
+           arr[1] = 2;
+           arr[9] = true;
+           console.log('arr :>> ', arr);
+           console.log('arr[0] :>> ', arr[0]);
+           console.log('arr.length :>> ', arr.length);
+           var arr2 = new Array(123, 345, 567);
+           console.log('arr2 :>> ', arr2);
+           var arr3 = ["zhangsan", 123, true];
+           console.log('arr3 :>> ', arr3); */
+        // 2)数组的API
+        var fruit = ["apple", "orange", "banana", "cucumber"];
+        var fruit2 = ["苹果", "橙子", "香蕉", "黄瓜"];
+
+        var fruitsall = fruit.concat(fruit2);
+        var fruitsall2 = fruit2.concat(fruit2);
+        var fruitsall3 = fruit2.concat(fruit);
+        console.log('fruitsall :>> ', fruitsall);// ['apple', 'orange', 'banana', 'cucumber', '苹果', '橙子', '香蕉', '黄瓜']
+        //转化为字符串
+        console.log('fruitsall.join("-") :>> ', fruitsall.join("-"));
+        console.log('fruitsall2 :>> ', fruitsall2);
+        console.log('fruitsall3 :>> ', fruitsall3);
+
+        var res = fruit.pop();
+        console.log('res :>> ', res);
+        var o = fruit.push(123); //返回数组个数
+        console.log('o :>> ', o);
+        console.log('fruit :>> ', fruit);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

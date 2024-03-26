@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = [11, 22, 33, 44, 55]
+        let [a, b, c, d, e = 1000] = arr;
+        console.log('a,b,c,d,e :>> ', a, b, c, d, e);
+        let person = {
+            name: "xiaowang",
+            age: 12
+        }
+        let { age, name } = person
+        console.log('name,age :>> ', name, age);
+
+        // 解构表达式在方法的参数列表
+        function showArr([a, b, c]) {
+            console.log('a,b,c :>> ', a, b, c);
+        }
+        let arr2 = [1, 233, 2222];
+        showArr(arr2)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

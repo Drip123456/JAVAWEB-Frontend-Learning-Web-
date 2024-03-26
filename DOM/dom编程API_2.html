@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 获取dom树
+        // 2.取得元素
+        // 3.操作元素
+        /* 1.操作元素的属性 ele.value
+           2.操作元素的样式 ele.style.样式名  带"-"转成驼峰命名
+           3.操作元素的文本
+           4.增删元素 */
+        function changeAttribute() {
+            var ele = document.getElementById("in1");
+
+            // 元素.属性名=""
+            console.log(ele.type);
+            console.log(ele.value);
+
+            ele.type = "button"
+            ele.value = "hi"
+        }
+        function changeStyle() {
+            var ele = document.getElementById("in1");
+            ele.style.color = "green";
+            ele.style.borderRadius = "5px"
+        }
+        function changeText() {
+            var div01 = document.getElementById("div01");
+            /* 语法 .innerTest 只识别文本
+               语法 .innerHTML 同时可以识别HTML代码 */
+            // 获取文本 
+            console.log(div01.innerText);
+            // div01.innerText = "嗨";
+            div01.innerHTML = "<h1>嗨</h1>"
+
+        }
+
+    </script>
+    <style>
+        #in1 {
+            color: red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div01">
+        hi
+    </div>
+    <hr>
+    <input id="in1" type="text" value="hello">
+    <hr>
+    <button onclick="changeAttribute()">操作属性</button>
+    <button onclick="changeStyle()">操作样式</button>
+    <button onclick="changeText()">操作文本</button>
+
+</body>
+
+</html>

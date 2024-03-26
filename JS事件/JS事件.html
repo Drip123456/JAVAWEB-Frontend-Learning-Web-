@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1、鼠标事件  onclick ondbclick onmouseleave onmouseover
+        //  2、键盘事件 onkeydown onkeyup
+        //  3、表单事件 onfocus(获取焦点) onblur(失去焦点) onchange onsubmit onreset
+        //  4.页面加载事件 onload
+        /* 
+        绑定按键行为 1、通过元素的属性绑定 2、通过dom编程动态绑定
+
+        注意 一个事件可以绑定多个函数
+            一个元素可以绑定多个事件
+         */
+        function fun1() {
+            console.log("单击了");
+        }
+        function fun2() {
+            console.log("单击了2");
+        }
+        function fun3() {
+            console.log("双击了");
+        }
+        // 1、鼠标事件  onclick ondbclick onmouseleave onmouseover
+        function fun4() {
+            console.log("鼠标悬停了");
+        }
+        function fun5() {
+            console.log("鼠标移动了");
+        }
+        function fun6() {
+            console.log("鼠标离开了");
+        }
+        //2、键盘事件 onkeydown onkeyup
+        function fun7() {
+            console.log("按键按下了");
+        }
+        function fun8() {
+            console.log("按键抬起了");
+        }
+        //3、表单事件 onfocus(获取焦点) onblur(失去焦点) onchange onsubmit onreset
+        function testFocus() {
+            console.log("获取焦点了");
+        }
+        function testchange(value) {
+            console.log("数据改变了" + value);
+        }
+
+        function testchange2(value) {
+            console.log("选项改变了" + value);
+        }
+        function testSubmit() {
+            var flag = confirm("是否提交")
+
+            /*  // 利用confirm确认是否提交
+             if (!flag) {
+                 event.preventDefault();//阻止默认行为，取消提交表单
+             }
+             //或者返回true或false到调用这个函数的事件
+  */
+            if (!flag) {
+                return false;
+            }
+            return true;
+            // 或者直接return flag;
+        }
+        function testReset() {
+            return confirm("表单是否重置");
+        }
+    </script>
+</head>
+
+<body>
+    <form action="index.html" method="get" onsubmit="return testSubmit()" onreset="return testReset()">
+        <!-- this.value 为当前元素的值 -->
+        用户名：<input type="text" name="realname" onfocus="testFocus()" onblur="testFocus()"
+            onchange="testchange(this.value)">
+        登录账号：<input type="text" name="loginname">
+        <input type="submit" value="注册">
+        <input type="reset" value="清空">
+    </form>
+    <!-- this.value 为当前元素的值 -->
+    <select name="" onchange="testchange2(this.value)">
+        <option value="xiaowang">xiaowang</option>
+        <option value="123">123</option>
+        <option value="22">22</option>
+    </select>
+
+    <hr>
+    <input type="button" value="单击" onclick="fun1(),fun2()" ondblclick="fun3()">
+    <br>
+    <img src="../img/girl.png" alt="picture" width="80px" onmouseover="fun4()" onmousemove="fun5()"
+        onmouseleave="fun6()">
+    <br>
+    <input type="text" onkeydown="fun7()" onkeyup="fun8()">
+
+</body>
+
+</html>
+<!-- 
+    HTML 事件可以是浏览器行为，也可以是用户行为。 
+    当这些一些行为发生时,可以自动触发对应的JS函数的运行,
+    我们称之为事件发生.JS的事件驱动指的就是行为触发代码运行的这种特点
+ -->

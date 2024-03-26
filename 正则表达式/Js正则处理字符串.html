@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //校验
+        /*   var reg = /o/ //判断字符串是否包含o，不加""
+          var str = "hello";
+          console.log(res.test(str));//正则表达式API */
+
+        /* 匹配 */
+
+        // var reg = /o/
+        // var reg1 = /o/g //g->global 匹配所有
+        // var str = "hello world";
+        // var res = str.match(reg);
+        // var res1 = str.match(reg1)
+        // console.log('res :>> ', res);
+        // console.log('res1 :>> ', res1);
+
+        /* 替换 */
+        // var reg = /o/
+        // var reg1 = /o/gi //g->global 匹配所有 i->ignore 忽略大小写
+        // var str = "hello wOrld";
+        // var res = str.replace(reg, '@');
+        // var res1 = str.replace(reg1, "@");
+        // console.log('res :>> ', res);
+        // console.log('res1 :>> ', res1);
+
+        /* 校验 */
+        // var reg = /^java/i;//^ 检测是否为字符串开头 i->ignore 忽略大小写
+        // var reg2 = /java$/ //$ 检测是否为字符串结尾
+        // var str = "Java is great";
+        // var str2 = "i love java";
+        // console.log(reg.test(str));
+        // console.log(reg2.test(str2));
+
+        /* 检验用户名是否合法 */
+        // 1.必须字符开头
+        // 2.长度为6-10位
+        // 3.后面其他字符可以是大小写字符，数字和下划线
+        var str = "qaasa_123";
+        /* 注意： []里面如果有空格，说明这一位也可以有空格 */
+        // 为什么要用/^  $/ 因为这样能确保就这几位数，否则单独存在都不能确保字符串个数
+        var reg = /^[a-zA-Z][a-zA-Z0-9_]{5,9}$/    //方括号[]是一位的规则,{}是有几位重复的上一位规则
+        // var reg = /^[a-zA-Z][a-zA-Z0-9_]{1,}$/ //代表上一位至少出现1次
+        // var reg = /^[a-zA-Z][a-zA-Z0-9_]+$/ //代表{1，}
+        // var reg = /^[a-zA-Z][a-zA-Z0-9_]*$/ //代表{0，}
+        // var reg = /^[a-zA-Z][a-zA-Z0-9_]?$/ //代表{0,1}出现0,1次
+        // var reg = /^[a-zA-Z]\w{5,9}$/  //\w 代表[a-zA-Z0-9_]即字母数字下划线
+        console.log(reg.test(str));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

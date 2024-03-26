@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #t1 {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="t1">
+        <script>
+            var t1 = document.getElementById("t1")
+            t1.onclick = function () {
+                // let _this = this
+               /*  window.setTimeout(function () {
+                    _this.style.backgroundColor = "yellow" //这里不能直接用this,因为指向的是window，所以要用外层的this指向元素t1
+                }, 2000) */;
+                window.setTimeout(() => {
+                    this.style.backgroundColor = "yellow" //这里this由箭头函数定义时的上下文来决定的
+                }, 2000);
+
+            }
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="demo01.html" method="post">
+        昵称：<input type="text" name="nickname"><br>
+        密码：<input type="password" name="pwd"><br>
+        性别： 男<input type="radio" name="sex" value="男">
+        女<input type="radio" name="sex" value="女"><br>
+        <br>
+        爱好：篮球<input type="checkbox" name="hobby" value="篮球">
+        足球<input type="checkbox" name="hobby" value="足球" checked>
+        排球 <input type="checkbox" name="hobby" value="排球">
+
+        <select name="star">
+            <option value="baiyangzuo" selected>白羊座</option>
+            <option value="tianxiezuo">天蝎座</option>
+        </select>
+        <br>
+        备注<textarea name="备注" id="" cols="30" rows="10"></textarea>
+        <br>
+        <input type="submit" value="注册">
+        <input type="reset" value="重置">
+        <input type="button" value="普通按钮">
+    </form>
+    <!--
+一、get和post定义
+form元素的method属性用来指定发送form的http方法；
+使用get时，form数据集被附加到form元素的action属性所指定的URL后面；
+使用post时，form数据集被包装在请求的body中并被发送。
+get是从服务器上获取数据，post是向服务器传送数据。
+二、get和Post的区别
+如果用get提交一个验证用户名和密码的form，一般认为是不安全的，因为用户名和密码将出现在URL上，进而出现在浏览器的历史记录中。
+显然，在对安全性有要求的情况下，应该使用post。
+三：最本质的区别
+get是用来从服务器上获得数据，而post是用来向服务器上传递数据。get可以在URL后面看见所提交的数据，但是Post是不会看见的！get安全性非常低，post安全性较高。
+ -->
+</body>
+
+</html>

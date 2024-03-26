@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        /*JSON格式用法
+         *var PersonStr='{"属性名"："属性值"，"属性名"："属性值""属性名"："{}"，"属性名"：[" "," "],"属性名"："{},{},{}"}'
+         *属性名必须用""，属性值如果是字符串要用"",数字可以不做处理
+         *JSON不研究方法，只有属性
+         */
+
+        //这是一个JSON格式的字符串
+        var PersonStr = '{"name":"张三","age":13,"dog":{"dname":"小花"},"loveStars":["张晓明","王晓东","李晓静"],"friends":[{"fname":"赵四"},{"fname":"王小龙"},{"fname":"张小龙"}]}';
+        console.log(PersonStr);
+        console.log(typeof PersonStr); //String JSON这里是个字符串
+        console.log(PersonStr.name); // undefined 而字符串是没有对象的
+        //转成对象才能查到PersonStr.name 
+
+
+        var person = JSON.parse(PersonStr);
+        console.log(person);
+        console.log(typeof person);
+        console.log(person.name);
+        console.log(person.dog.dname);
+        console.log(person.loveStars[0]);
+        console.log(person.friends[0].fname);
+
+        //将对象转成JSON字符串
+        var PersonStr2 = JSON.stringify(person);
+        console.log(PersonStr2);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

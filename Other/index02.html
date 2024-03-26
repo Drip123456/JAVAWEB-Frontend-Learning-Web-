@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <style>
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+    <script src="delete.js"></script>
+</head>
+<!-- HTML 表格
+HTML 表格由 <table> 标签来定义。
+
+HTML 表格是一种用于展示结构化数据的标记语言元素。
+
+每个表格均有若干行（由 <tr> 标签定义），每行被分割为若干单元格（由 <td> 标签定义），表格可以包含标题行（<th>）用于定义列的标题。
+
+tr：tr 是 table row 的缩写，表示表格的一行。
+td：td 是 table data 的缩写，表示表格的数据单元格。
+th：th 是 table header的缩写，表示表格的表头单元格。
+数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。 -->
+
+<table border="1" width="400px" cellspacing="0" cellpadding="10" class="tab">
+    <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>id</th>
+        <th>sex</th>
+        <th>操作</th>
+    </tr>
+    <tr align="center" class="row">
+        <td>小米</td>
+        <td rowspan="1">12</td>
+        <td>123456</td>
+        <td>male</td>
+        <td><img src="img/girl.png" alt=""></td>
+    </tr>
+    <tr align="center" class="row">
+        <td>小wang</td>
+        <td rowspan="1">12</td>
+
+        <td>123456</td>
+        <td>male</td>
+        <td><img src="img/girl.png" alt=""></td>
+
+    </tr>
+    <tr align="center" class="row">
+        <td>sum</td>
+        <td colspan="3">24</td>
+        <td><img src="img/girl.png" alt=""></td>
+
+    </tr>
+</table>
+
+<body>
+
+</body>
+
+</html>

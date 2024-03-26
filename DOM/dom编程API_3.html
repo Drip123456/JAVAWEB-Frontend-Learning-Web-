@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 获取dom树
+        // 2.取得元素
+        // 3.操作元素
+        /* 1.操作元素的属性 ele.value
+           2.操作元素的样式 ele.style.样式名  带"-"转成驼峰命名
+           3.操作元素的文本
+           4.增删元素 */
+        function addCs() {
+            //创建元素
+            var csli = document.createElement("li") //<li></li>
+            //设置元素属性和文本
+            csli.id = "shijiazhuang";
+            csli.innerText = "石家庄";
+            //调节元素位置(将子元素放到父元素里)
+            var city = document.getElementById("city");
+            //在父元素里创建元素
+            city.append(csli);
+
+        }
+        function addCsBeforeKm() {
+            //创建元素
+            var csli = document.createElement("li") //<li></li>
+            //设置元素属性和文本
+            csli.id = "shijiazhuang";
+            csli.innerText = "石家庄";
+            //调节元素位置(将子元素放到父元素里)
+            var city = document.getElementById("city");
+            var Km = document.getElementById("kunming")
+            //在父元素里创建元素
+            city.insertBefore(csli, Km);//（新元素，旧元素）
+
+        }
+        function replaceBj() {
+            //创建元素
+            var csli = document.createElement("li") //<li></li>
+            //设置元素属性和文本
+            csli.id = "shijiazhuang";
+            csli.innerText = "石家庄";
+            //调节元素位置(将子元素放到父元素里)
+            var city = document.getElementById("city");
+            var bj = document.getElementById("beijing")
+            //在父元素里替换元素
+            city.replaceChild(csli, bj);//（新元素，旧元素）
+        }
+        function removeCs() {
+            var Cs = document.getElementById("changsha");
+            Cs.remove();
+        }
+        function Clear() {
+            var cityul = document.getElementById("city");
+            // var first = cityul.firstChild;
+            // while (first != null) {
+            //     first.remove();
+            //     first = cityul.firstChild;
+            // }
+            // 或者
+            cityul.innerHTML = ""
+        }
+
+
+
+
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <ul id="city">
+        <li id="changsha">长沙</li>
+        <li id="guangzhou">广州</li>
+        <li id="kunming">昆明</li>
+        <li id="beijing">北京</li>
+    </ul>
+    <button onclick="addCs()">增加城市</button>
+
+    <button onclick="addCsBeforeKm()">在昆明之前增加城市</button>
+    <button onclick="replaceBj()">替换北京</button>
+    <!-- 删除某元素 -->
+    <button onclick="removeCs()">删除长沙</button>
+    <button onclick="Clear()">清空列表</button>
+
+
+
+</body>
+
+</html>

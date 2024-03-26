@@ -1,0 +1,46 @@
+<!-- 内容区（content）
+填充（padding）
+边框（border）
+空白边（margin） -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div1 {
+            width: 400px;
+            height: 400px;
+            background-color: greenyellow;
+            /* border-width: 1px;
+            border-color: blue;
+            border-style: solid; */
+            border: 4px blue solid;
+            border-top: 4px blue solid;
+
+        }
+
+        #div2 {
+            width: 200px;
+            height: 200px;
+            background-color: darkorange;
+            /* 上下100 左右0 */
+            /* margin: 100px 0px;  */
+            /*上右下左（顺时针）  */
+            margin: 100px 50px 100px 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <div id="div2">&nbsp;</div>
+    </div>
+
+
+</body>
+
+</html>

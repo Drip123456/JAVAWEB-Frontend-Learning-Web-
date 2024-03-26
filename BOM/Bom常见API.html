@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // windows API
+        function fun1() {
+            alert("123");
+            // window可以省略不写
+            // window.alert("123")
+        }
+        function fun2() {
+            prompt("123");
+            // window.prompt("123")
+        }
+        function fun3() {
+            confirm("123");
+            // window.confirm("123")
+        }
+        // window 属性API
+        function funA() {
+            // window.history.back();
+            // 上一页
+            // history.back();
+            history.go(-1);//向前翻-1页
+        }
+        function funB() {
+            // 下一页
+            // history.forward();
+            history.go(1)//向前翻几页
+        }
+        function funC() {
+            // window.location.href = "https://www.bilibili.com";
+            location.href = "https://www.bilibili.com";//修改地址栏的url
+        }
+        function funD() {
+            //向sessionStorage存数据(浏览器重启就没了)
+            sessionStorage.setItem("keya", "valuea");
+            //向localStorage存数据(浏览器重启还在)
+            localStorage.setItem("keyb", "valueb");
+        }
+        function funE() {
+            console.log(sessionStorage.getItem("keya"));
+            console.log(localStorage.getItem("keyb"));
+        }
+        function funF() {
+            sessionStorage.removeItem("keya");
+            localStorage.removeItem("keyb")
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="funD()">存储数据</button>
+    <button onclick="funE()">读取数据</button>
+    <button onclick="funF()">清空数据</button>
+    <hr>
+    <button onclick="funC()">bilibili</button>
+    <hr>
+    <button onclick="funA()">上一页</button>
+    <button onclick="funB()">下一页</button>
+    <a href="https://www.bilibili.com">bilibili</a>
+    <hr>
+    <button onclick="fun1(),fun2(),fun3()">按钮</button>
+</body>
+
+</html>
