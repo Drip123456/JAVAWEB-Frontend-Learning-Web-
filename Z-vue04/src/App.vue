@@ -12,11 +12,13 @@ function receiver(data) {
 </script>
 
 <template>
-  {{ msg }}
-  <hr>
-  <Header class="header"></Header>
-  <Navigator @send-menu="receiver" class="navigator"></Navigator>
-  <Content :message="msg" class="content"></Content>
+  <div>
+    {{ msg }}
+    <hr>
+    <Header class="header"></Header>
+    <Navigator @send-menu="receiver" class="navigator"></Navigator>
+    <Content :message="msg" class="content"></Content>
+  </div>
 </template>
 
 <style scoped>
